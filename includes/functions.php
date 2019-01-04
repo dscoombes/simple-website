@@ -72,6 +72,19 @@ function page_content()
 }
 
 /**
+ * Displays a page-specific image. 
+ */
+function page_image()
+{
+    $page = isset($_GET['page']) ? $_GET['page'] : 'home';
+
+    $path =  '/' . config('image_path') . '/' . $page . '.png';
+  
+    echo '<img src='.$path.' />';
+   
+}
+
+/**
  * Starts everything and displays the template.
  */
 function init()
