@@ -9,7 +9,7 @@ function config($key = '')
 {
     $config = [
         'name' => 'Contoso Website',
-        'site_url' => 'https://fotoshareapp6238.azurewebsites.net',
+        'site_url' => 'site-url-here',
         'pretty_uri' => false,
         'nav_menu' => [
             '' => 'Home',
