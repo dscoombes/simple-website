@@ -18,7 +18,6 @@
     <article>
 <!-- Uncomment the following line to display image at top of page -->        
 <!--    <?php page_image(); ?> -->
-        <h2><?php page_title(); ?></h2>
         <?php page_content(); ?>
 <!-- Uncomment the following line to display image at bottom of page -->           
 <!--    <img src="images/generate-image.php" alt='<?php site_name(); ?>' title='<?php site_name(); ?>' width="600" height="100"> -->
