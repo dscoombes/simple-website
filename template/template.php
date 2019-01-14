@@ -24,10 +24,6 @@
 <!--    <img src="images/generate-image.php" alt='<?php site_name(); ?>' title='<?php site_name(); ?>' width="600" height="100"> -->
     </article>
 
-    <footer>
-        <small>&copy;<?php echo date('Y'); ?> <?php site_name(); ?>.<br><?php site_version(); ?></small>
-    </footer>
-
 </div>
 </body>
 </html>

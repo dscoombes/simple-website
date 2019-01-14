@@ -17,14 +17,6 @@ function site_url()
 }
 
 /**
- * Displays site version.
- */
-function site_version()
-{
-    echo config('version');
-}
-
-/**
  * Website navigation.
  */
 function nav_menu($sep = ' | ')
