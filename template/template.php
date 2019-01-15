@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title><?php page_title(); ?> | <?php app_name(); ?></title>
+    <title><?php app_name(); ?></title>
     <link href="<?php app_url(); ?>/template/style.css" rel="stylesheet" type="text/css" /> 
 </head>
 <body>

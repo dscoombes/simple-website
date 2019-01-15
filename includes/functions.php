@@ -19,7 +19,7 @@ function app_url()
 /**
  * Page navigation.
  */
-function nav_menu($sep = ' | ')
+function navigation($sep = ' | ')
 {
     $navigation = '';
     $menu_items = appconfig('navigation');
@@ -31,16 +31,6 @@ function nav_menu($sep = ' | ')
     }
 
     echo trim($navigation, $sep);
-}
-
-/**
- * Returns page title.
- */
-function page_title()
-{
-    $page = isset($_GET['page']) ? htmlspecialchars($_GET['page']) : 'Home';
-
-    echo ucwords(str_replace('-', ' ', $page));
 }
 
 /**
