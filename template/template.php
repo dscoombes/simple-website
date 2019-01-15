@@ -2,16 +2,16 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title><?php page_title(); ?> | <?php site_name(); ?></title>
-    <link href="<?php site_url(); ?>/template/style.css" rel="stylesheet" type="text/css" /> 
+    <title><?php page_title(); ?> | <?php app_name(); ?></title>
+    <link href="<?php app_url(); ?>/template/style.css" rel="stylesheet" type="text/css" /> 
 </head>
 <body>
-<div class="wrap">
+<div class="content">
 
     <header>
-        <h1><?php site_name(); ?></h1>
+        <h1><?php app_name(); ?></h1>
         <nav class="menu">
-            <?php nav_menu(); ?>
+            <?php navigation(); ?>
         </nav>
     </header>
 
@@ -20,7 +20,7 @@
 <!--    <?php page_image(); ?> -->
         <?php page_content(); ?>
 <!-- Uncomment the following line to display image at bottom of page -->           
-<!--    <img src="images/generate-image.php" alt='<?php site_name(); ?>' title='<?php site_name(); ?>' width="600" height="100"> -->
+<!--    <img src="images/generate-image.php" alt='<?php app_name(); ?>' title='<?php app_name(); ?>' width="600" height="100"> -->
     </article>
 
 </div>

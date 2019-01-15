@@ -1,42 +1,40 @@
 <?php
 
 /**
- * Displays site name.
+ * Returns the name of the Web app.
  */
-function site_name()
+function app_name()
 {
-    echo config('name');
+    echo appconfig('name');
 }
 
 /**
- * Displays site url provided in conig.
+ * Returns the Web app URL.
  */
-function site_url()
+function app_url()
 {
-    echo config('site_url');
+    echo appconfig('app_url');
 }
 
 /**
- * Website navigation.
+ * Page navigation.
  */
 function nav_menu($sep = ' | ')
 {
-    $nav_menu = '';
-    $nav_items = config('nav_menu');
-    foreach ($nav_items as $uri => $name) {
+    $navigation = '';
+    $menu_items = appconfig('navigation');
+    foreach ($menu_items as $uri => $name) {
         $class = str_replace('page=', '', $_SERVER['QUERY_STRING']) == $uri ? ' active' : '';
-        $url = config('site_url') . '/' . (config('pretty_uri') || $uri == '' ? '' : '?page=') . $uri;
+        $url = appconfig('app_url') . '/' . (appconfig('pretty_uri') || $uri == '' ? '' : '?page=') . $uri;
         
-        $nav_menu .= '<a href="' . $url . '" title="' . $name . '" class="item ' . $class . '">' . $name . '</a>' . $sep;
+        $navigation .= '<a href="' . $url . '" title="' . $name . '" class="item ' . $class . '">' . $name . '</a>' . $sep;
     }
 
-    echo trim($nav_menu, $sep);
+    echo trim($navigation, $sep);
 }
 
 /**
- * Displays page title. It takes the data from
- * URL, it replaces the hyphens with spaces and
- * it capitalizes the words.
+ * Returns page title.
  */
 function page_title()
 {
@@ -46,40 +44,38 @@ function page_title()
 }
 
 /**
- * Displays page content. It takes the data from
- * the static pages inside the pages/ directory.
- * When not found, display the 404 error page.
+ * Returns page content. 
  */
 function page_content()
 {
     $page = isset($_GET['page']) ? $_GET['page'] : 'home';
 
-    $path = getcwd() . '/' . config('content_path') . '/' . $page . '.phtml';
+    $path = getcwd() . '/' . appconfig('content_path') . '/' . $page . '.phtml';
 
     if (! file_exists($path)) {
-        $path = getcwd() . '/' . config('content_path') . '/404.phtml';
+        $path = getcwd() . '/' . appconfig('content_path') . '/404.phtml';
     }
 
     echo file_get_contents($path);
 }
 
 /**
- * Displays a page-specific image. 
+ * Returns a page-specific image. 
  */
 function page_image()
 {
     $page = isset($_GET['page']) ? $_GET['page'] : 'home';
 
-    $path =  '/' . config('image_path') . '/' . $page . '.png';
+    $path =  '/' . appconfig('image_path') . '/' . $page . '.png';
   
     echo '<img src='.$path.' />';
    
 }
 
 /**
- * Starts everything and displays the template.
+ * Loads page from template.
  */
 function init()
 {
-    require config('template_path') . '/template.php';
+    require appconfig('template_path') . '/template.php';
 }

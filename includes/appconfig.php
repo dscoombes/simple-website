@@ -1,15 +1,15 @@
 <?php
 
 /**
- * Website configuration
+ * Web app configuration
  */
-function config($key = '')
+function appconfig($key = '')
 {
-    $config = [
+    $appconfig = [
         'name' => 'Contoso Costume Rentals',
-        'site_url' => 'site-url-here',
+        'app_url' => 'app-url-here',
         'pretty_uri' => false,
-        'nav_menu' => [
+        'navigation' => [
             '' => 'Home',
             'about-us' => 'About Us',
             'services' => 'Services',
@@ -20,5 +20,5 @@ function config($key = '')
         'image_path' => 'images',
     ];
 
-    return isset($config[$key]) ? $config[$key] : null;
+    return isset($appconfig[$key]) ? $appconfig[$key] : null;
 }
