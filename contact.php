@@ -18,11 +18,11 @@ include("functions/functions.php");
 		<?php include("includes/navigation.php");?>
 
 		<div class="article">
-			<br>
-			<p>Professional hire for classic, vintage, and contemporary costumes.</p> 
-			<p></p>Use for shop displays, TV, film, theater or promotional events, parties, weddings, graduations, our wide range will meet all your needs.</p>
-			<p>All costumes are categorised by period, size, comfort and look.</p>
-			<p>Book an appointment to visit our costume store, our professional and knowledgeable team is on hand with expert fitting and styling advice.</p>
+			<h2>Contact page</h2>
+			<br />
+			<p>To contact us:</p>
+			<p>Phone: 555-0100</p>
+			<p>Or visit our store : 4567 Main St Buffalo, NY 98052</p>
 		</div>
 		<?php page_bottom_image(); ?>
 		<br />
