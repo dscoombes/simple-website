@@ -30,17 +30,19 @@ include("functions/functions.php");
 				<tr>
 					<td>Product launch</td>
 					<td>&nbsp;</td>
-					<td>Dress suit</td>
+					<td><a href="details.php?product=10">Smart suits</a></td>
 				</tr>
 				<tr>
 					<td>Party</td>
 					<td>&nbsp;</td>
-					<td>Evening wear</td>
+					<td>
+                    <a href="details.php?product=20">Wedding dresses</a></td>
 				</tr>
 				<tr>
 					<td>Special occasion</td>
 					<td>&nbsp;</td>
-					<td>Fancy dress</td>
+					<td>
+                    <a href="details.php?product=30">Party outfits</a></td>
 				</tr>
 			</table>
 		</div>

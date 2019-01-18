@@ -13,6 +13,10 @@ switch ($_SERVER["SCRIPT_NAME"]) {
 		$CURRENT_PAGE = "Services";
 		$PAGE_TITLE = "Our Services";
 		break;
+    case "/details.php":
+		$CURRENT_PAGE = "Details";
+		$PAGE_TITLE = "Service Details";
+		break;
 	default:
 		$CURRENT_PAGE = "Index";
 		$PAGE_TITLE = "Welcome to Contoso Costume Rentals";
@@ -40,7 +44,7 @@ function app_url()
 function page_top_image($page)
 {
 	if (config('graphics') == 'true') {
-		echo '<img src="/images/' . $page . '.png" />';
+		echo '<img src="/images/' . $page . '.png" alt="' . $page . '" title="' . $page . '" />';
 	} else {
 		echo ' ';
 	}
